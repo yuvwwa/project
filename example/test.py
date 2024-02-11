@@ -15,7 +15,7 @@ class test_settings(unittest.TestCase):
 
     def test_check_open_settings(self):
         manager=settings_manager()
-        result=manager.open("settings.json")
+        result=manager.open("../exampe/settings.json")
         print(manager.data)
         assert result == True
 
@@ -28,9 +28,11 @@ class test_settings(unittest.TestCase):
 
     def test_check_open_convert(self):
         manager=settings_manager()
-        manager.open("setttings.json")
+        manager.open("../exampe/setttings.json")
         settings = manager.settings
         data = manager.data
         v = [i for i in dir(settings) if not i.startswith("_") and getattr(settings, i) != data[i] ]
         assert len(v) == 0
         manager.convert()
+
+unittest.main()
