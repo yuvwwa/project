@@ -28,6 +28,8 @@ class settings:
     def inn(self, value:str):
         if not isinstance(value, str):
             raise Exception("error")
+
+        value = value.strip()
         
         if len(value) != 12:
             raise Exception("ERROR: должно быть 12 символов!")
