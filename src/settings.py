@@ -7,7 +7,6 @@ class settings:
     __main_name=""
     __owner=""
 
-#имя 
     @property
     def first_name(self):
         return self.__first_name
@@ -18,8 +17,7 @@ class settings:
             raise Exception("error")
         
         self.__first_name = value.strip()
-    
-#инн
+    #fkdcn
     @property
     def inn(self):
         return self.__inn
