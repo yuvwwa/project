@@ -1,7 +1,14 @@
-from src.models.abstract_reference import abstract_reference
+from src.reference import reference
 
-#создаем пустой класс "группа номенклатура"
+#модель группы номенклатуры
+class group_model(reference):
 
-class nomenclature_group_model(abstract_reference):
-    def __init__ (self, name):
-        super().__init__(name)
+    def create_group():
+        """
+        Фабричный метод. Создать группу по умолчанию
+
+        Returns:
+            _type_: _description_
+        """
+        item = group_model("Ингридиенты")
+        return item

@@ -1,0 +1,50 @@
+Date : 2024-02-20 10:10:33
+Directory : c:\Users\yuvwwa\project
+Total : 18 files,  525 codes, 52 comments, 148 blanks, all 725 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| Python             |         15 |        429 |         52 |        127 |        608 |
+| Markdown           |          2 |         87 |          0 |         20 |        107 |
+| JSON with Comments |          1 |          9 |          0 |          1 |         10 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                           | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                              |         18 |        525 |         52 |        148 |        725 |
+| . (Files)                                                      |          1 |          9 |          0 |          2 |         11 |
+| Docs                                                           |          1 |         78 |          0 |         18 |         96 |
+| src                                                            |         12 |        327 |         26 |         99 |        452 |
+| src (Files)                                                    |          6 |        190 |          8 |         55 |        253 |
+| src\models                                                     |          6 |        137 |         18 |         44 |        199 |
+| tst                                                            |          4 |        111 |         26 |         29 |        166 |
++----------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                       | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\yuvwwa\project\Docs\technicaltask.md                  | Markdown           |         78 |          0 |         18 |         96 |
+| c:\Users\yuvwwa\project\README.md                              | Markdown           |          9 |          0 |          2 |         11 |
+| c:\Users\yuvwwa\project\src\abstract_reference.py              | Python             |          0 |          0 |          1 |          1 |
+| c:\Users\yuvwwa\project\src\argument_exception.py              | Python             |          9 |          0 |          3 |         12 |
+| c:\Users\yuvwwa\project\src\error_proxy.py                     | Python             |         47 |          0 |          7 |         54 |
+| c:\Users\yuvwwa\project\src\models\abstract_reference.py       | Python             |         32 |          0 |          8 |         40 |
+| c:\Users\yuvwwa\project\src\models\company_model.py            | Python             |         34 |          4 |          9 |         47 |
+| c:\Users\yuvwwa\project\src\models\measurement_unit_model.py   | Python             |         24 |          6 |         10 |         40 |
+| c:\Users\yuvwwa\project\src\models\nomenclature_group_model.py | Python             |          4 |          1 |          2 |          7 |
+| c:\Users\yuvwwa\project\src\models\nomenclature_model.py       | Python             |         39 |          6 |         13 |         58 |
+| c:\Users\yuvwwa\project\src\models\storage_model.py            | Python             |          4 |          1 |          2 |          7 |
+| c:\Users\yuvwwa\project\src\operation_exception.py             | Python             |          5 |          0 |          1 |          6 |
+| c:\Users\yuvwwa\project\src\settings.py                        | Python             |         75 |          6 |         27 |        108 |
+| c:\Users\yuvwwa\project\src\settings_manager.py                | Python             |         54 |          2 |         16 |         72 |
+| c:\Users\yuvwwa\project\tst\settings.json                      | JSON with Comments |          9 |          0 |          1 |         10 |
+| c:\Users\yuvwwa\project\tst\test_errors.py                     | Python             |         29 |          0 |          6 |         35 |
+| c:\Users\yuvwwa\project\tst\test_models.py                     | Python             |         46 |         23 |          9 |         78 |
+| c:\Users\yuvwwa\project\tst\test_settings.py                   | Python             |         27 |          3 |         13 |         43 |
+| Total                                                          |                    |        525 |         52 |        148 |        725 |
++----------------------------------------------------------------+--------------------+------------+------------+------------+------------+

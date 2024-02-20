@@ -1,42 +1,53 @@
-from src.settings import settings
-from src.settings_manager import settings_manager
+from src.settings_manager import settings_manager 
 import unittest
 
-class test_settings(unittest.TestCase):
 
-    def test_check_first_name(self):
-        #подготовка
-        item=settings()
-        #действие
-        item.first_name="k "
-        #проверка
-        assert item.first_name=="k"
+#
+# Набор автотестов для проверки работы модуля настроек
+#
+class settings_test(unittest.TestCase):
     
-    def test_check_open_settings(self):
+    #
+    # Проверить на корректность создания и загрузки файла с настройками
+    #
+    def test_create_app_settings(self):
+        # Подготовка
         manager = settings_manager()
 
-        result = manager.open("/tst/settings.json")
+        # Действие
+        result = manager.data
 
-        assert result != False
-
-    def test_check_create_manager(self):
+        # Проверки
+        print(manager.data)
+        print(type(manager.data))
+        assert result is not None
+        assert manager.settings.inn > 0
+        assert manager.settings.short_name != ""
+        
+    #
+    # Проверить тип создания объекта как singletone
+    #    
+    def test_double_create_app_setting(self):
+        # Подготовка
         manager1 = settings_manager()
         manager2 = settings_manager()
-
-        print(manager1.number)
-        print(manager2.number)
-
-        assert(manager1.number == manager2.number)
-
-    def test_check_manager_convert(self):
-        manager = settings_manager()
-        manager.open("tst/settings.json")
         
-        fields=manager.data.keys()
-        print(fields)
-        for field in fields:
-            print(getattr(manager.settings,field))
-            print(manager.data[field])
-            assert getattr(manager.settings,field)==manager.data[field]
-
-
+        # Действие
+        
+        # Проверки
+        print(manager1._uniqueNumber)
+        print(manager2._uniqueNumber)
+        assert manager1._uniqueNumber == manager2._uniqueNumber
+        
+    #
+    # Проверить работу менеджера загрузки настроек при не корректном файле настроек
+    #    
+    def test_fail_open_settings(self):
+        # Подготовка
+        manager = settings_manager()
+        
+        # Действие
+        manager.open("test.json")
+        
+        # Проверки
+        assert manager.error.is_empty == False

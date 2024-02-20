@@ -1,40 +1,83 @@
-from src.models.abstract_reference import abstract_reference
-from src.argument_exception import argument_exception
-from numbers import Number
+from src.reference import reference
+from src.exceptions import exception_proxy, argument_exception
 
-class measurement_unit_model(abstract_reference):
-    #базовая единица измерения (грамм для килограмма)
-    __base_measurement_unit = None
-    #базовый коэффициент
-    __base_coefficient = None
-
-    #создаем свойства
-    #создаем сеттеры. присваеваем значения 
-
-    @property
-    def base_measurement_unit(self):
-        """ Базовая единица измерения """
-        return self.__base_measurement_unit
-
-    @base_measurement_unit.setter
-    def base_measurement_unit(self, value):
-        #проверка
-        if not isinstance(value, measurement_unit_model):
-            raise argument_exception ("Несоответсвие типа аргумента")
+#
+# Модель единицы измерения для номенклатуры
+#
+class unit_model(reference):
+    
+    # Базовая единица измерения
+    __base_unit: reference = None
+    
+    # Коэффициент пересчета к базовой единице измерения
+    __coefficient: int = 1
+    
+    def __init__(self, name: str, base: reference = None, coeff: int = 1 ):
+        super().__init__(name)
         
-        self.__base_measurement_unit = value
+        if base != None:
+            self.base_unit = base
+            
+        if coeff != 1:
+            self.coefficient = coeff   
+        
     
     @property
-    def base_coefficient(self):
-        """ Базовый кэффициент """
-        return self.__base_coefficient
+    def base_unit(self):
+        """
+            Базовая единица измерения
+        Returns:
+            _type_: _description_
+        """
+        return self.__base_unit
     
-    @base_coefficient.setter
-    def base_coefficient(self, value):
-        #проверка
-        if not isinstance(value, Number):
-            raise argument_exception ("Несоответсвие типа аргумента")
+    
+    @base_unit.setter
+    def base_unit(self, value: reference ):
+        exception_proxy.validate(value, reference)
+        self.__base_unit = value
         
-        self.__base_coefficient = value
+    
+    @property    
+    def coefficient(self):
+        """
+            Коэффициент пересчета
+        Returns:
+            _type_: _description_
+        """
+        return self.__coefficient
+    
+    @coefficient.setter
+    def   coefficient(self, value:int):
+        exception_proxy.validate(value, int)
+        
+        if(value <= 0):
+            raise argument_exception("Значение коэффициента должно быть > 1!")
+        
+        self.__coefficient = value  
+        
+        
+    @staticmethod    
+    def create_gram():
+        """
+            Создать единицу измерения грамм
+
+        Returns:
+            _type_: _description_
+        """
+        item = unit_model("грамм", None, 1)
+        return item    
+    
+    @staticmethod
+    def create_killogram():
+        """
+            Создать единицу килограмм
+        Returns:
+            _type_: _description_
+        """
+        base = unit_model.create_gram()
+        item = unit_model("киллограмм", base, 1000)
+        return item
+
 
         
