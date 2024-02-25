@@ -1,6 +1,9 @@
 from src.models.measurement_unit_model import unit_model
 from src.logics.start_factory import start_factory
 from src.settings_manager import settings_manager
+from src.storage.storage import storage
+from src.models.nomenclature_group_model import group_model
+from src.models.nomenclature_model import nomenclature_model
 
 import unittest
 
@@ -37,7 +40,7 @@ class factory_test(unittest.TestCase):
     #      
     # Проверка работы класса start_factory
     #
-    def test_check_start_factor(self):
+    def test_check_start_factory(self):
         # Подготовка
         manager = settings_manager()
         factory = start_factory( manager.settings )
@@ -49,8 +52,10 @@ class factory_test(unittest.TestCase):
         
         # Проверка
         if manager.settings.is_first_start == True:
-            assert len(result) > 0
-            return
-        
+            assert len(result) > 0      
         
         assert len(result) == 0    
+        assert not factory.storage is None
+        assert storage.nomenclature_key in factory.storage.data
+        assert storage.group_key in factory.storage.data
+        assert storage.unit_key in factory.storage.data

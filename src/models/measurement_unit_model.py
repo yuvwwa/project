@@ -78,6 +78,4 @@ class unit_model(reference):
         base = unit_model.create_gram()
         item = unit_model("киллограмм", base, 1000)
         return item
-
-
-        
+                
