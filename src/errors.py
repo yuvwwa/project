@@ -6,7 +6,6 @@
 class error_proxy:
     " Текст с описание ошибки "
     _error_text = ""
-    
     def __init__(self, exception: Exception = None):
         if exception is not None:
             self.set_error(exception)

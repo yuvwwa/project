@@ -42,7 +42,6 @@ class reference(ABC):
         exception_proxy.validate( value.strip(), str)
         self._description = value.strip()
         
-        
     @property
     def id(self):
         " Уникальный код записи "

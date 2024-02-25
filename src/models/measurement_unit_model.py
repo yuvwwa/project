@@ -66,8 +66,8 @@ class unit_model(reference):
             _type_: _description_
         """
         item = unit_model("грамм", None, 1)
-        return item    
-    
+        return item  
+
     @staticmethod
     def create_killogram():
         """
@@ -77,5 +77,29 @@ class unit_model(reference):
         """
         base = unit_model.create_gram()
         item = unit_model("киллограмм", base, 1000)
-        return item
+        return item  
                 
+    @staticmethod    
+    def create_millilitr():
+        """
+            Создать единицу измерения грамм
+        Returns:
+            _type_: _description_
+        """
+        item = unit_model("миллилитр", None, 1)
+        return item    
+
+    @staticmethod
+    def create_litr():
+        """
+            Создать единицу килограмм
+        Returns:
+            _type_: _description_
+        """
+        base = unit_model.create_millilitr()
+        item = unit_model("литр", base, 1000)
+        return item
+    
+    @staticmethod
+    def create_thing():
+        return unit_model ("штук")

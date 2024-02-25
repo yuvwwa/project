@@ -56,6 +56,16 @@ class factory_test(unittest.TestCase):
         
         assert len(result) == 0    
         assert not factory.storage is None
-        assert storage.nomenclature_key in factory.storage.data
-        assert storage.group_key in factory.storage.data
-        assert storage.unit_key in factory.storage.data
+        
+        assert storage.nomenclature_key() in factory.storage.data
+        assert storage.group_key() in factory.storage.data
+        assert storage.unit_key() in factory.storage.data
+
+    def test_check_create(self):
+        storage_create= storage()   
+        
+        assert len(storage_create.data[storage.nomenclature_key()]) > 0
+        assert len(storage_create.data[storage_create.unit_key()]) > 0
+        assert len(storage_create.data[storage_create.group_key()]) > 0
+        assert len(storage_create.data[storage_create.ingridient_key()]) > 0
+        assert len(storage_create.data[storage_create.receipe_key()]) > 0

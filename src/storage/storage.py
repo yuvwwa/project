@@ -50,3 +50,21 @@ class storage:
             _type_: _description_
         """
         return "unit"
+
+    @staticmethod  
+    def ingridient_key():
+        """
+              Список единиц измерения
+        Returns:
+            _type_: _description_
+        """
+        return "ingridient"
+    
+    @staticmethod  
+    def receipe_key():
+        """
+              Список единиц измерения
+        Returns:
+            _type_: _description_
+        """
+        return "receipe"

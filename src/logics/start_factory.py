@@ -119,15 +119,17 @@ class start_factory:
         result = []
         if self.__oprions.is_first_start == True:
             self.__oprions.is_first_start = False
-            return start_factory.create_nomenclature()
-        self.__save( storage.nomenclature_key(), result )
+            recipe_model = self.create_nomenclature
+            recipe_model = start_factory.__save
+        nomenclatures =[]
+        groups = []
+        units = []
+        ingredients = list()
+        for ingredient in ingredients:
+            nomenclatures.add(ingredient.nomenclature)
+            groups.add(ingredient.nomenclature.group)
+            units.add(ingredient.nomenclature.unit)
+        self.__save(storage.nomenclature_key(), result)
+        self.__save(storage.group_key(), list())
+        self.__save(storage.unit_key(), list())
         return result
-
-    def build(self):
-        if self.__storage == None:
-            self.__storage = storage()
-
-        self.__storage.data[storage.nomenclature_key] = start_factory.create_nomenclature()
-        self.__storage.data[storage.group_key] = start_factory.create_nomenclature()
-        self.__storage.data[storage.unit_key] = start_factory.create_nomenclature()
-    
