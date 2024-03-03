@@ -7,8 +7,24 @@ class settings():
     _inn = 0
     _short_name = ""
     _first_start = True
+    _report_format = ""
     
+    @property
+    def report_format(self):
+        """
+            report_format
+        Returns:
+            int: 
+        """
+        return self._report_format
     
+    #добавляем csv, markdown, json
+    @report_format.setter
+    def report_format(self, value: str):
+        value = value.lower()
+        if value not in ["csv", "markdown", "json"]:
+            raise exception_proxy("Error")
+
     @property
     def inn(self):
         """
