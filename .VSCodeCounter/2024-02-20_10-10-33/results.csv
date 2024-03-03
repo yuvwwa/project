@@ -1,0 +1,20 @@
+"filename", "language", "Python", "Markdown", "JSON with Comments", "comment", "blank", "total"
+"c:\Users\yuvwwa\project\Docs\technicaltask.md", "Markdown", 0, 78, 0, 0, 18, 96
+"c:\Users\yuvwwa\project\README.md", "Markdown", 0, 9, 0, 0, 2, 11
+"c:\Users\yuvwwa\project\src\abstract_reference.py", "Python", 0, 0, 0, 0, 1, 1
+"c:\Users\yuvwwa\project\src\argument_exception.py", "Python", 9, 0, 0, 0, 3, 12
+"c:\Users\yuvwwa\project\src\error_proxy.py", "Python", 47, 0, 0, 0, 7, 54
+"c:\Users\yuvwwa\project\src\models\abstract_reference.py", "Python", 32, 0, 0, 0, 8, 40
+"c:\Users\yuvwwa\project\src\models\company_model.py", "Python", 34, 0, 0, 4, 9, 47
+"c:\Users\yuvwwa\project\src\models\measurement_unit_model.py", "Python", 24, 0, 0, 6, 10, 40
+"c:\Users\yuvwwa\project\src\models\nomenclature_group_model.py", "Python", 4, 0, 0, 1, 2, 7
+"c:\Users\yuvwwa\project\src\models\nomenclature_model.py", "Python", 39, 0, 0, 6, 13, 58
+"c:\Users\yuvwwa\project\src\models\storage_model.py", "Python", 4, 0, 0, 1, 2, 7
+"c:\Users\yuvwwa\project\src\operation_exception.py", "Python", 5, 0, 0, 0, 1, 6
+"c:\Users\yuvwwa\project\src\settings.py", "Python", 75, 0, 0, 6, 27, 108
+"c:\Users\yuvwwa\project\src\settings_manager.py", "Python", 54, 0, 0, 2, 16, 72
+"c:\Users\yuvwwa\project\tst\settings.json", "JSON with Comments", 0, 0, 9, 0, 1, 10
+"c:\Users\yuvwwa\project\tst\test_errors.py", "Python", 29, 0, 0, 0, 6, 35
+"c:\Users\yuvwwa\project\tst\test_models.py", "Python", 46, 0, 0, 23, 9, 78
+"c:\Users\yuvwwa\project\tst\test_settings.py", "Python", 27, 0, 0, 3, 13, 43
+"Total", "-", 429, 87, 9, 52, 148, 725
