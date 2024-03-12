@@ -115,3 +115,4 @@ class settings_manager(object):
             error_proxy: 
         """
         return self._error
+

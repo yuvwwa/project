@@ -1,8 +1,8 @@
-from src.models.measurement_unit_model import unit_model
+from models.unit_model import unit_model
 from src.logics.start_factory import start_factory
 from src.settings_manager import settings_manager
 from src.storage.storage import storage
-from src.models.nomenclature_group_model import group_model
+from models.group_model import group_model
 from src.models.nomenclature_model import nomenclature_model
 
 import unittest

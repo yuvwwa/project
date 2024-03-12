@@ -1,6 +1,6 @@
-from src.models.nomenclature_group_model import group_model
+from models.group_model import group_model
 from src.models.nomenclature_model import  nomenclature_model
-from src.models.measurement_unit_model import unit_model
+from models.unit_model import unit_model
 from src.exceptions import argument_exception
 
 import unittest

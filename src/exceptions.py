@@ -55,6 +55,8 @@ class exception_proxy(Exception):
 
         return True
      
+   
+         
      
 #
 # Исключение при проверки аргументов
@@ -67,3 +69,4 @@ class argument_exception(exception_proxy):
 #    
 class operation_exception(exception_proxy):
     pass    
+    

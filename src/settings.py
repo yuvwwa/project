@@ -7,24 +7,9 @@ class settings():
     _inn = 0
     _short_name = ""
     _first_start = True
-    _report_format = ""
+    _mode = "csv"
     
-    @property
-    def report_format(self):
-        """
-            report_format
-        Returns:
-            int: 
-        """
-        return self._report_format
     
-    #добавляем csv, markdown, json
-    @report_format.setter
-    def report_format(self, value: str):
-        value = value.lower()
-        if value not in ["csv", "markdown", "json"]:
-            raise exception_proxy("Error")
-
     @property
     def inn(self):
         """
@@ -64,3 +49,20 @@ class settings():
     @is_first_start.setter        
     def is_first_start(self, value: bool):
         self._first_start = value
+        
+    @property
+    def report_mode(self):
+        """
+            Режим построения отчетности
+        Returns:
+            _type_: _description_
+        """
+        return self._mode
+    
+    
+    @report_mode.setter
+    def report_mode(self, value: str):
+        exception_proxy.validate(value, str)
+        
+        self._mode = value
+    

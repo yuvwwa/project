@@ -93,4 +93,4 @@ class reporting(abc.ABC):
         Returns:
             dict: словарь с данными
         """
-        return self.__data  
+        return self.__data 

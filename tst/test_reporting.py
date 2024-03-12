@@ -1,7 +1,7 @@
 import unittest
 from src.reporting.reporting import csv_reporting
 from src.storage.storage import storage
-from src.models.measurement_unit_model import unit_model
+from models.unit_model import unit_model
 
 class reporting_test(unittest.TestCase):
     def test_reporting(self):
