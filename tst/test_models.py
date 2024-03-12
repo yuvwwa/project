@@ -1,6 +1,6 @@
-from models.group_model import group_model
+from src.models.group_model import group_model
 from src.models.nomenclature_model import  nomenclature_model
-from models.unit_model import unit_model
+from src.models.unit_model import unit_model
 from src.exceptions import argument_exception
 
 import unittest
@@ -25,6 +25,7 @@ class nomenclature_test(unittest.TestCase):
         item.unit = unit
 
         # Проверка
+        print(item.unit)
         assert item is not None
 
     # 

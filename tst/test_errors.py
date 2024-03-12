@@ -31,4 +31,5 @@ class error_proxy_test(unittest.TestCase):
             
         # Проверка
         print(proxy.error)
-        assert proxy.error != "" 
+        assert proxy.error != ""    
+            
